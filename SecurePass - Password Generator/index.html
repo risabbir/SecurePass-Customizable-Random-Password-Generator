@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass: Customizable Random Password Generator</title>
+    <meta name="description" content="SecurePass generates strong, random passwords based on your settings. It provides real-time feedback on password strength, and everything is processed locally with no external tracking.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+     <!--  
+© 2025 <a href="https://rsabbir.com/">R.Sabbir</a>. All rights reserved.  
+SecurePass: Customizable Random Password Generator – Respect the work.  
+-->
+
+
+    <div class="container">
+        <h1>SecurePass</h1>
+        <p class="subtitle">Generate secure, random passwords with customizable options</p>
+        
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+            <div class="password-actions">
+                <button id="copy-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy
+                </button>
+                <button id="regenerate-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="23 4 23 10 17 10"></polyline>
+                        <polyline points="1 20 1 14 7 14"></polyline>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                    </svg>
+                    Regenerate
+                </button>
+            </div>
+        </div>
+        
+        <div class="strength-meter">
+            <div class="strength-fill" id="strength-fill"></div>
+        </div>
+        <div class="strength-text" id="strength-text"></div>
+        
+        <div class="settings">
+            <div class="setting-group">
+                <span class="setting-title">Password Length: <span id="length-value">12</span></span>
+                <div class="range-container">
+                    <input type="range" id="length" min="3" max="65" value="12">
+                </div>
+            </div>
+            
+            <div class="setting-group">
+                <span class="setting-title">Character Sets:</span>
+                <div class="checkboxes">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">Uppercase Letters (A-Z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">Lowercase Letters (a-z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">Numbers (0-9)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="symbols" checked>
+                        <label for="symbols">Symbols (!@#$%^&*)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exclude-similar">
+                        <label for="exclude-similar">Exclude Similar Characters (i,I,1,l,L,o,O,0)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        &copy; <span id="year"></span>  SecurePass Developed by R. Sabbir | All Rights Reserved
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
