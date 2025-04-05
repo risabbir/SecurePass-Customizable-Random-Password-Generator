@@ -38,7 +38,7 @@ Password strength is shown as:
 ### **Live Link:**
 
 Access the tool here:  
-[**Live Demo**](https://rsabbir.com/tools/securepass-random-password-generator/)
+[**Live Demo**](https://rsabbir.com/tools/random-password-generator/)
 
 
 ---
